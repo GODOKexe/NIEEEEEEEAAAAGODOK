@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>GODOK</title>
+</head>
+<body>
+  <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
+  <p id="altYazi">ADINI YAZ VE İSTERSEN KENDİNİ TANIT</p>
+  <a href="kendini-tanit.html"><button>Kendini Tanıt</button></a>
+  <a href="ziyaretciler.html"><button>Yazdıklarını Gör</button></a>
+  <input type="text" id="isimKutusu" placeholder="Adını yaz" />
+  <button id="buton">Gönder</button>
+
+  <div id="gelenIsimler"></div>
+
+
+  <script type="module">
+
+
+
+
+;
+
+    // Elementleri seç
+     isimKutusu = document.getElementById("isimKutusu");
+     buton = document.getElementById("buton");
+     baslik = document.getElementById("baslik");
+     altYazi = document.getElementById("altYazi");
+     gelenIsimler = document.getElementById("gelenIsimler");
+
+    // Butona tıklandığında veri gönder
+    buton.addEventListener("click", () => {
+      if (!isim) {
+        alert("Lan adını yazsana!");
+        return;
+      }
+      else {
+        alert("SELAM" + isim + "!");
+      }
+
+
+      baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
+      document.body.style.backgroundColor = "#222";
+      altYazi.innerText = "ADINI YAZDIN ŞİMDİ KENDİNİ TANIT";
+      buton.innerText = "Tekrar Gönder";
+
+
+
+      isimKutusu.value = "";
+    });
+
+
+    
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kendini Tanıt</title>
+</head>
+<body style="background:#111; color:#fff; padding:20px; font-family:sans-serif">
+  <h2>Kendini Tanıt</h2>
+  <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
+  <br><br>
+  <button onclick="kaydet()">Kaydet</button>
+
+  <script>
+    function kaydet() {
+      const yazi = document.getElementById("yazi").value;
+      if (!yazi.trim()) return alert("Boş bırakma lan!");
+
+      let mevcut = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
+      mevcut.push(yazi);
+      localStorage.setItem("ziyaretciler", JSON.stringify(mevcut));
+
+      alert("Kaydettim lan. Git bak şimdi!");
+      document.getElementById("yazi").value = "";
+    }
+  </script>
+</body>
+</html>

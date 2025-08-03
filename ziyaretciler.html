@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ziyaretçi Defteri</title>
+</head>
+<body style="background:#111; color:#fff; padding:20px; font-family:sans-serif">
+  <h2>Ziyaretçi Defteri</h2>
+  <div id="liste"></div>
+
+  <script>
+    const veriler = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
+    const alan = document.getElementById("liste");
+
+    if (veriler.length === 0) {
+      alan.innerHTML = "<p>Hiç yazı yok. Git kendini tanıt lan!</p>";
+    } else {
+      veriler.forEach((yazi, index) => {
+        const kutu = document.createElement("div");
+        kutu.style.padding = "10px";
+        kutu.style.marginBottom = "10px";
+        kutu.style.border = "1px solid #555";
+        kutu.innerText = `${index + 1}. ${yazi}`;
+        alan.appendChild(kutu);
+      });
+    }
+  </script>
+</body>
+</html>

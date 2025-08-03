@@ -11,7 +11,8 @@
   <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
   <br><br>
   <button class="düğme" onclick="hepsiniSil()">Hepsini Sil</button>
-  <button class="düğme" window.history.back()>Geri Git</button>
+  <button class="dugme" onclick="window.history.back()">Geri Git</button>
+
 
 <script>
   const veriler = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
@@ -35,5 +36,6 @@
 
 </body>
 </html>
+
 
 

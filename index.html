@@ -32,6 +32,8 @@
 
     // Butona tıklandığında veri gönder
     buton.addEventListener("click", () => {
+      const isim = isimKutusu.value.trim();
+      
       if (!isim) {
         alert("Lan adını yazsana!");
         return;
@@ -56,5 +58,6 @@
   </script>
 </body>
 </html>
+
 
 

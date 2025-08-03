@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <title>Ziyaretçi Defteri</title>
 </head>
@@ -9,8 +10,8 @@
   <div id="liste"></div>
   <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
   <br><br>
-  <button onclick="hepsiniSil()">Hepsini Sil</button>
-  <button onclick="window.history.back()">Geri Git</button>
+  <button class="düğme" onclick="hepsiniSil()">Hepsini Sil</button>
+  <button class="düğme" window.history.back()>Geri Git</button>
 
 <script>
   const veriler = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
@@ -34,4 +35,5 @@
 
 </body>
 </html>
+
 

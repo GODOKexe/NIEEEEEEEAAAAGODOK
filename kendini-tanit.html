@@ -16,18 +16,19 @@
   <script>
     function kaydet() {
       const yazi = document.getElementById("yazi").value;
-      if (!yazi.trim()) return alert("Boş bırakma lan!");
+      if (!yazi.trim()) return alert("LÜTFEN KENDİNİ TANIT");
 
       let mevcut = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
       mevcut.push(yazi);
       localStorage.setItem("ziyaretciler", JSON.stringify(mevcut));
 
-      alert("Kaydettim lan. Git bak şimdi!");
+      alert("YAZINIZ KAYDEDİLDİ :D");
       document.getElementById("yazi").value = "";
     }
   </script>
 </body>
 </html>
+
 
 
 

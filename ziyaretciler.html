@@ -7,23 +7,31 @@
 <body style="background:#111; color:#fff; padding:20px; font-family:sans-serif">
   <h2>Ziyaretçi Defteri</h2>
   <div id="liste"></div>
+  <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
+  <br><br>
+  <button onclick="hepsiniSil()">Hepsini Sil</button>
+  <button onclick="window.history.back()">Geri Git</button>
 
-  <script>
-    const veriler = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
-    const alan = document.getElementById("liste");
+<script>
+  const veriler = JSON.parse(localStorage.getItem("ziyaretciler") || "[]");
+  const liste = document.createElement("ul");
 
-    if (veriler.length === 0) {
-      alan.innerHTML = "<p>Hiç yazı yok. Git kendini tanıt lan!</p>";
-    } else {
-      veriler.forEach((yazi, index) => {
-        const kutu = document.createElement("div");
-        kutu.style.padding = "10px";
-        kutu.style.marginBottom = "10px";
-        kutu.style.border = "1px solid #555";
-        kutu.innerText = `${index + 1}. ${yazi}`;
-        alan.appendChild(kutu);
-      });
-    }
-  </script>
+  veriler.forEach((item, i) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    liste.appendChild(li);
+  });
+
+  document.body.appendChild(liste);
+
+  function hepsiniSil() {
+    if (!confirm("Hepsini silmek istediğine emin misin lan?")) return;
+    localStorage.removeItem("ziyaretciler");
+    alert("Hepsini sildim lan.");
+    location.reload(); // Sayfayı yenile ki liste de temizlensin
+  }
+</script>
+
 </body>
 </html>
+

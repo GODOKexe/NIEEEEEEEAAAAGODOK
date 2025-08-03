@@ -2,15 +2,16 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <title>Kendini Tanıt</title>
 </head>
 <body style="background:#111; color:#fff; padding:20px; font-family:sans-serif">
   <h2>Kendini Tanıt</h2>
   <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
   <br><br>
-  <button onclick="kaydet()">Kaydet</button>
-  <button onclick="document.getElementById('yazi').value = ''">Yazıyı Sil</button>
-  <button onclick="window.history.back()">Geri Git</button>
+  <button class="düğme" kaydet()>Kaydet</button>
+  <button class="düğme" onclick="document.getElementById('yazi').value = ''">Yazıyı Sil</button>
+  <button class="düğme" onclick="window.history.back()">Geri Git</button>
 
   <script>
     function kaydet() {
@@ -27,4 +28,6 @@
   </script>
 </body>
 </html>
+
+
 

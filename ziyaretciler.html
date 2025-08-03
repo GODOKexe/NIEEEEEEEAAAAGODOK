@@ -8,7 +8,7 @@
 <body style="background:#111; color:#fff; padding:20px; font-family:sans-serif">
   <h2>Ziyaretçi Defteri</h2>
   <div id="liste"></div>
-  <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
+  <textarea id="yazi" rows="8" cols="50" placeholder="Metin girin..." style="width:100%; padding:10px;"></textarea>
   <br><br>
   <button class="dugme" onclick="hepsiniSil()">Hepsini Sil</button>
   <button class="dugme" onclick="window.history.back()">Geri Git</button>
@@ -27,15 +27,16 @@
   document.body.appendChild(liste);
 
   function hepsiniSil() {
-    if (!confirm("Hepsini silmek istediğine emin misin lan?")) return;
+    if (!confirm("HEPSİNİ SİLİYORUM")) return;
     localStorage.removeItem("ziyaretciler");
-    alert("Hepsini sildim lan.");
+    alert("HALLETTİM");
     location.reload(); // Sayfayı yenile ki liste de temizlensin
   }
 </script>
 
 </body>
 </html>
+
 
 
 

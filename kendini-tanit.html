@@ -9,6 +9,8 @@
   <textarea id="yazi" rows="8" cols="50" placeholder="İstediğini yaz..." style="width:100%; padding:10px;"></textarea>
   <br><br>
   <button onclick="kaydet()">Kaydet</button>
+  <button onclick="document.getElementById('yazi').value = ''">Yazıyı Sil</button>
+  <button onclick="window.history.back()">Geri Git</button>
 
   <script>
     function kaydet() {
@@ -25,3 +27,4 @@
   </script>
 </body>
 </html>
+

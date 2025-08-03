@@ -1,63 +1,47 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <title>GODOK</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1 id="baslik">GODOK’un Web Sitesine Hoş Geldin</h1>
   <p id="altYazi">ADINI YAZ VE İSTERSEN KENDİNİ TANIT</p>
-  <a href="kendini-tanit.html"><button>Kendini Tanıt</button></a>
-  <a href="ziyaretciler.html"><button>Yazdıklarını Gör</button></a>
+
+  <a href="kendini-tanit.html"><button class="düğme">Kendini Tanıt</button></a>
+  <a href="ziyaretciler.html"><button class="düğme">Yazdıklarını Gör</button></a>
+  
+  <br><br>
   <input type="text" id="isimKutusu" placeholder="Adını yaz" />
   <button class="düğme" id="buton">Gönder</button>
 
-  <div id="gelenIsimler"></div>
+  <script>
+    // Elemanları seç
+    const isimKutusu = document.getElementById("isimKutusu");
+    const buton = document.getElementById("buton");
+    const baslik = document.getElementById("baslik");
+    const altYazi = document.getElementById("altYazi");
 
-
-  <script type="module">
-
-
-
-
-;
-
-    // Elementleri seç
-     isimKutusu = document.getElementById("isimKutusu");
-     buton = document.getElementById("buton");
-     baslik = document.getElementById("baslik");
-     altYazi = document.getElementById("altYazi");
-     gelenIsimler = document.getElementById("gelenIsimler");
-
-    // Butona tıklandığında veri gönder
+    // Butona tıklanınca çalışacak
     buton.addEventListener("click", () => {
       const isim = isimKutusu.value.trim();
-      
+
       if (!isim) {
         alert("Lan adını yazsana!");
         return;
       }
-      else {
-        alert("SELAM" + isim + "!");
-      }
 
+      alert("SELAM " + isim + "!");
 
       baslik.innerText = "Selam " + isim.toUpperCase() + " 👋";
       document.body.style.backgroundColor = "#222";
       altYazi.innerText = "ADINI YAZDIN ŞİMDİ KENDİNİ TANIT";
       buton.innerText = "Tekrar Gönder";
 
-
-
       isimKutusu.value = "";
     });
-
-
-    
   </script>
 </body>
 </html>
-
-
 

@@ -54,5 +54,14 @@ h2 {
   margin-top: 10px;
   box-sizing: border-box;
 }
+.godok-kusu {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  width: 80px;
+  image-rendering: pixelated;
+  z-index: 9999;
+}
+
 
 

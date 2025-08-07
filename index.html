@@ -23,9 +23,9 @@
     const baslik = document.getElementById("baslik");
     const altYazi = document.getElementById("altYazi");
   let konum = 20;
-  const kus = document.getElementById("godok-kusu");
+  
   let yon = 1; // 1 → sağa, -1 → sola
-const kus = document.getElementById("kus");
+  const kus = document.getElementById("kus");
 
 kus.addEventListener("click", () => {
   kus.classList.add("dans-ediyo");
@@ -33,7 +33,7 @@ kus.addEventListener("click", () => {
   // Animasyon bittikten sonra class'ı sil
   setTimeout(() => {
     kus.classList.remove("dans-ediyo");
-  }, 1000); // 1 saniye sonra sil (CSS'teki süreyle aynı olmalı)
+  }, 2000); // 1 saniye sonra sil (CSS'teki süreyle aynı olmalı)
 });
 
   kus.addEventListener("click", () => {
@@ -75,6 +75,7 @@ kus.addEventListener("click", () => {
   </script>
 </body>
 </html>
+
 
 
 

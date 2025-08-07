@@ -24,10 +24,28 @@
     const altYazi = document.getElementById("altYazi");
   let kus = document.getElementById("godok-kusu");
   let konum = 20;
+    const kus = document.getElementById("godok-kusu");
+  let konum = 20;
+  let yon = 1; // 1 → sağa, -1 → sola
 
   kus.addEventListener("click", () => {
-    konum += 1300; // her tıklamada 50px sağa gider
+    konum += 1300 * yon;
+
+    // Kuşu hareket ettir
     kus.style.left = konum + "px";
+
+    // Eğer sağ sınırı geçerse (örnek: 1000px)
+    if (konum > 1319) {
+      yon = -1;
+      kus.style.transform = "scaleX(-1)"; // aynalama — arkaya döndü
+    }
+
+    // Eğer sol sınırı geçerse (başlangıca döndü)
+    if (konum < 20) {
+      yon = 1;
+      kus.style.transform = "scaleX(1)"; // tekrar öne döndü
+    }
+  });
   });
     // Butona tıklanınca çalışacak
     buton.addEventListener("click", () => {
@@ -50,6 +68,7 @@
   </script>
 </body>
 </html>
+
 
 
 

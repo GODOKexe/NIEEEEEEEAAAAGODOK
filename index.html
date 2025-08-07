@@ -22,10 +22,8 @@
     const buton = document.getElementById("buton");
     const baslik = document.getElementById("baslik");
     const altYazi = document.getElementById("altYazi");
-  let kus = document.getElementById("godok-kusu");
   let konum = 20;
-    const kus = document.getElementById("godok-kusu");
-  let konum = 20;
+  const kus = document.getElementById("godok-kusu");
   let yon = 1; // 1 → sağa, -1 → sola
 
   kus.addEventListener("click", () => {
@@ -45,7 +43,6 @@
       yon = 1;
       kus.style.transform = "scaleX(1)"; // tekrar öne döndü
     }
-  });
   });
     // Butona tıklanınca çalışacak
     buton.addEventListener("click", () => {
@@ -68,6 +65,7 @@
   </script>
 </body>
 </html>
+
 
 
 

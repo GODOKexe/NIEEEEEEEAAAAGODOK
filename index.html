@@ -24,38 +24,8 @@
     const altYazi = document.getElementById("altYazi");
   let konum = 20;
   
-  let yon = 1; // 1 → sağa, -1 → sola
+  
   const kus = document.getElementById("kus");
-
-
-
-  // Animasyon bittikten sonra class'ı sil
-  setTimeout(() => {
-    kus.classList.remove("dans-ediyo");
-  }, 2000); // 1 saniye sonra sil (CSS'teki süreyle aynı olmalı)
-});
-
-  kus.addEventListener("click", () => {
-    konum += 1300 * yon;
-    kus.classList.add("dans-ediyo");
-    // Kuşu hareket ettir
-    kus.style.left = konum + "px";
-
-    // Eğer sağ sınırı geçerse (örnek: 1000px)
-    if (konum > 1319) {
-      yon = -1;
-      kus.style.transform = "scaleX(-1)"; // aynalama — arkaya döndü
-    }
-
-    // Eğer sol sınırı geçerse (başlangıca döndü)
-    if (konum < 21) {
-      yon = 1;
-      kus.style.transform = "scaleX(1)"; // tekrar öne döndü
-    }
-  });
-    // Butona tıklanınca çalışacak
-    buton.addEventListener("click", () => {
-      const isim = isimKutusu.value.trim();
 
       if (!isim) {
         alert("LÜTFEN ADINI YAZ");
@@ -74,6 +44,7 @@
   </script>
 </body>
 </html>
+
 
 
 

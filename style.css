@@ -56,12 +56,13 @@ h2 {
 }
 .godok-kusu {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   left: 20px;
-  width: 80px;
+  width: 160px;
   image-rendering: pixelated;
   z-index: 9999;
 }
+
 
 
 

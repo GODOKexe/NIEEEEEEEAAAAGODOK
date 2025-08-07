@@ -27,8 +27,7 @@
   let yon = 1; // 1 → sağa, -1 → sola
   const kus = document.getElementById("kus");
 
-kus.addEventListener("click", () => {
-  kus.classList.add("dans-ediyo");
+
 
   // Animasyon bittikten sonra class'ı sil
   setTimeout(() => {
@@ -38,7 +37,7 @@ kus.addEventListener("click", () => {
 
   kus.addEventListener("click", () => {
     konum += 1300 * yon;
-
+    kus.classList.add("dans-ediyo");
     // Kuşu hareket ettir
     kus.style.left = konum + "px";
 
@@ -75,6 +74,7 @@ kus.addEventListener("click", () => {
   </script>
 </body>
 </html>
+
 
 
 

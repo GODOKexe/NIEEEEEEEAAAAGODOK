@@ -22,7 +22,13 @@
     const buton = document.getElementById("buton");
     const baslik = document.getElementById("baslik");
     const altYazi = document.getElementById("altYazi");
+  let kus = document.getElementById("godok-kusu");
+  let konum = 20;
 
+  kus.addEventListener("click", () => {
+    konum += 50; // her tıklamada 50px sağa gider
+    kus.style.left = konum + "px";
+  });
     // Butona tıklanınca çalışacak
     buton.addEventListener("click", () => {
       const isim = isimKutusu.value.trim();
@@ -44,6 +50,7 @@
   </script>
 </body>
 </html>
+
 
 
 

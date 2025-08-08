@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>GODOK KUŞU</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>GODOĞA İSTEDİĞİNİ YAPTIR</h1>
   <a href="index.html"><button class="dugme">🔙 </button></a>
-  <button class="dugme">ZIPLA</button>
-  <img src="pixilart-drawing.png" alt="GODOK KUŞU" class="bizimkus">
+  <button class="dugme" id="buton">ZIPLA</button> <!-- butona id verdik -->
+  <img src="pixilart-drawing.png" alt="GODOK KUŞU" class="bizimkus" id="bizimkus" /> <!-- img'ye id verdik -->
 
+  <script>
+    const bizimkus = document.getElementById('bizimkus');
+    const buton = document.getElementById('buton');
+
+    buton.addEventListener('click', () => {
+      if (bizimkus.classList.contains('zipla')) return;  // Animasyon devam ediyorsa engelle
+
+      bizimkus.classList.add('zipla');
+
+      bizimkus.addEventListener('animationend', () => {
+        bizimkus.classList.remove('zipla');  // Animasyon bitince sınıfı kaldır
+      }, { once: true });
+    });
+  </script>
 </body>
 </html>
-<script>
-const bizimkus = document.getElementById('bizimkus');
-const buton = document.getElementById('buton');
 
-buton.addEventListener('click', () => {
-  if(bizimkus.classList.contains('zipla')) return;  // Animasyon devam ediyorsa engelle
 
-  bizimkus.classList.add('zipla');
-
-  bizimkus.addEventListener('animationend', () => {
-    bizimkus.classList.remove('zipla');  // Animasyon bitince sınıfı kaldır
-  }, { once: true });
-});
-</script>
 
 
 

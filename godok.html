@@ -24,18 +24,21 @@ solBtn.addEventListener('click', () => {
 sagBtn.addEventListener('click', () => {
   bizimkus.style.left = '80%';
 });
-    buton.addEventListener('click', () => {
-      if (bizimkus.classList.contains('zipla')) return;  // Animasyon devam ediyorsa engelle
+buton.addEventListener('click', () => {
+  if (bizimkus.classList.contains('zipla')) return;
 
-      bizimkus.classList.add('zipla');
+  bizimkus.classList.add('zipla');
 
-      bizimkus.addEventListener('animationend', () => {
-        bizimkus.classList.remove('zipla');  // Animasyon bitince sınıfı kaldır
-      }, { once: true });
-    });
+  bizimkus.addEventListener('animationend', () => {
+    bizimkus.classList.remove('zipla');
+    // Animasyon sonunda kesin transform'u sıfırla:
+    bizimkus.style.transform = 'translate(-50%, -50%) translateY(0)';
+  }, { once: true });
+});
   </script>
 </body>
 </html>
+
 
 
 

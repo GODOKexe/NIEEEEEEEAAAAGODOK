@@ -16,14 +16,14 @@
     const bizimkus = document.getElementById('bizimkus');
     const buton = document.getElementById('buton');
     const solBtn = document.getElementById('solBtn');
-    const sagBtn = document.getElemntById('sagBtn');
-    solBtn.addEventListener('click', () => {
-      // Kuşu sağa kaydır (örneğin left: 80%)
-      kus.style.left = '20%';
-    sagBtn.addEventListener('click', () => {
-      // Kuşu sağa kaydır (örneğin left: 80%)
-      kus.style.left = '80%';
-    });
+    const sagBtn = document.getElementById('sagBtn');
+solBtn.addEventListener('click', () => {
+  bizimkus.style.left = '20%';
+});
+
+sagBtn.addEventListener('click', () => {
+  bizimkus.style.left = '80%';
+});
     buton.addEventListener('click', () => {
       if (bizimkus.classList.contains('zipla')) return;  // Animasyon devam ediyorsa engelle
 
@@ -36,6 +36,7 @@
   </script>
 </body>
 </html>
+
 
 
 

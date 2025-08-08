@@ -65,13 +65,14 @@ h2 {
 }
 .bizimkus {
   position: absolute;
-  left: 100px;
+  left: 500px;
   bottom: 120px;
   width: 192px;
   height: auto;
   cursor: pointer;
   transition: left 5s ease-in-out;
 }
+
 
 
 

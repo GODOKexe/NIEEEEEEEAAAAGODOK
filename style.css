@@ -64,14 +64,12 @@ h2 {
   transition: left 5s ease-in-out;
 }
 .bizimkus {
-  position: absolute;
-  left: 500px;
-  bottom: 120px;
-  width: 192px;
-  height: auto;
-  cursor: pointer;
-  transition: left 5s ease-in-out;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
+
 
 
 

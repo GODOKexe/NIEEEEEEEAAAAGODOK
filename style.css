@@ -71,7 +71,9 @@ transform: translate(-50%, -50%);
 width: 400px;
 height: 400px;
 image-rendering: pixelated;
+transition: left 5s ease-in-out;
 }
+
 
 
 

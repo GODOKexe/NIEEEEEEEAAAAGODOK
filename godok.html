@@ -13,6 +13,21 @@
 
 </body>
 </html>
+<script>
+const bizimkus = document.getElementById('bizimkus');
+const buton = document.getElementById('buton');
+
+buton.addEventListener('click', () => {
+  if(bizimkus.classList.contains('zipla')) return;  // Animasyon devam ediyorsa engelle
+
+  bizimkus.classList.add('zipla');
+
+  bizimkus.addEventListener('animationend', () => {
+    bizimkus.classList.remove('zipla');  // Animasyon bitince sınıfı kaldır
+  }, { once: true });
+});
+</script>
+
 
 
 

@@ -16,7 +16,8 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index:7;
+  position: relative;
+  z-index: 7;
 }
 
 .dugme:hover {
@@ -45,6 +46,7 @@ ul li {
 h2 {
   color: #90caf9;
 }
+
 #isimKutusu {
   width: 100%;
   max-width: 400px;
@@ -55,27 +57,26 @@ h2 {
   margin-top: 10px;
   box-sizing: border-box;
 }
-.kus {
-  position: absolute;
-  left: 20px;
-  bottom: 120px;
-  width: 192px;
-  height: auto;
-  cursor: pointer;
-  transition: left 5s ease-in-out;
-}
-.bizimkus {
+
+.kus-container {
   position: absolute;
   top: 50%;
-  left: 0%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
   transform: translate(-50%, -50%);
+  transition: left 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.bizimkus {
+  position: relative; /* container içinde normal konum */
   width: 400px;
   height: 400px;
   image-rendering: pixelated;
-  transition: left 2s ease-in-out;
-  pointer-events: none;
-  z-index:0;
+  pointer-events: none; /* Üstüne tıklanmasın */
 }
+
 .balon {
   position: absolute;
   top: -60px;  /* kuşun ağzına hizalamak için */
@@ -89,6 +90,8 @@ h2 {
   border: 2px solid black;
   opacity: 0;
   animation: yaziyiGoster 4s ease forwards;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 .balon::after {
@@ -101,18 +104,12 @@ h2 {
   border-style: solid;
   border-color: white transparent transparent transparent;
 }
-.kus-container {
-  position: absolute; /* position relative değil absolute yap */
-  top: 50%;           /* yukarıdan ortala */
-  left: 50%;          /* soldan ortala */
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
+
 @keyframes yaziyiGoster {
   0% { opacity: 0; }
-  10% { opacity: 1; } /* 0.4s sonra görünmeye başlar */
-  70% { opacity: 1; } /* bir süre görünür kalır */
-  100% { opacity: 0; } /* yavaşça kaybolur */
+  10% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes zipla {
@@ -122,10 +119,9 @@ h2 {
 }
 
 .zipla {
-  animation: zipla 0.6s ease; /* forwards kaldırdık */
+  animation: zipla 0.6s ease;
 }
 
-}
 
 
 

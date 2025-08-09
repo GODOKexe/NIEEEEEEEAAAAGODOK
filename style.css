@@ -16,7 +16,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index:1;
+  z-index:7;
 }
 
 .dugme:hover {
@@ -74,7 +74,7 @@ h2 {
   image-rendering: pixelated;
   transition: left 2s ease-in-out;
   pointer-events: none;
-  z-index:0
+  z-index:0;
 }
 .balon {
   position: absolute;
@@ -124,6 +124,7 @@ h2 {
 .zipla {
   animation: zipla 0.6s ease; /* forwards kaldırdık */
 }
+
 
 
 

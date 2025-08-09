@@ -98,10 +98,10 @@ h2 {
   border-style: solid;
   border-color: white transparent transparent transparent;
 }
-.bizimkus-container {
+.kus-container {
   position: relative; /* Balon kuşun üstüne hizalansın */
-  width:400px
-  heigth:400px
+  width:400px;
+  heigth:400px;
 }
 
 
@@ -121,6 +121,7 @@ h2 {
 .zipla {
   animation: zipla 0.6s ease; /* forwards kaldırdık */
 }
+
 
 
 

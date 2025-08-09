@@ -55,7 +55,7 @@ function balonGoster() {
 toggleBalonBtn.addEventListener('click', () => {
   // Önce görünür yap
   balon.classList.add('visible');
-
+  balonGoster();
   // 4 saniye sonra kaybolsun
   setTimeout(() => {
     balon.classList.remove('visible');
@@ -83,6 +83,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

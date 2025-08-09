@@ -26,6 +26,31 @@
     const ziplaBtn = document.getElementById('buton');
     const toggleBalonBtn = document.getElementById('toggleBalonBtn');
     const balon = document.querySelector('.balon');
+    // Balon yazılarını tanımla
+    const balon = document.querySelector('.balon');
+    const balonYazilari = [
+  "Merhaba! Ben GODOK KUŞU",
+  "NIIIIEEEEEEEAAAAAA",
+  "Naber la?",
+  "UÇUYORUUUUUUMMM",
+  "GODOĞUN GÜCÜ",
+  "ASPEROX SARI GÜÇ"
+];
+
+// Balonu rastgele yazıyla göster
+function balonGoster() {
+  // Rastgele yazı seç
+  const rastgeleYazi = balonYazilari[Math.floor(Math.random() * balonYazilari.length)];
+  balon.textContent = rastgeleYazi;
+
+  // Balonu görünür yap
+  balon.style.opacity = 1;
+
+  // 3 saniye sonra balonu gizle
+  setTimeout(() => {
+    balon.style.opacity = 0;
+  }, 3000);
+}
 
 toggleBalonBtn.addEventListener('click', () => {
   // Önce görünür yap
@@ -58,6 +83,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

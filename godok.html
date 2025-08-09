@@ -19,30 +19,32 @@
 
   <script>
     const bizimkus = document.getElementById('bizimkus');
+    const kusContainer = document.getElementById('kusContainer');
     const buton = document.getElementById('buton');
     const solBtn = document.getElementById('solBtn');
     const sagBtn = document.getElementById('sagBtn');
 solBtn.addEventListener('click', () => {
-  bizimkus.style.left = '20%';
+  kusContainer.style.left = '20%';
 });
 
 sagBtn.addEventListener('click', () => {
-  bizimkus.style.left = '80%';
+  kusContainer.style.left = '80%';
 });
 buton.addEventListener('click', () => {
-  if (bizimkus.classList.contains('zipla')) return;
+  if (kusContainers.classList.contains('zipla')) return;
 
-  bizimkus.classList.add('zipla');
+  kusContainers.classList.add('zipla');
 
-  bizimkus.addEventListener('animationend', () => {
-    bizimkus.classList.remove('zipla');
+  kusContainer.addEventListener('animationend', () => {
+    kusContainer.classList.remove('zipla');
     // Animasyon sonunda kesin transform'u sıfırla:
-    bizimkus.style.transform = 'translate(-50%, -50%) translateY(0)';
+    kusContainer.style.transform = 'translate(-50%, -50%) translateY(0)';
   }, { once: true });
 });
   </script>
 </body>
 </html>
+
 
 
 

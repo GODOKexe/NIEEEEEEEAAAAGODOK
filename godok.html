@@ -9,41 +9,43 @@
   <h1>GODOĞA İSTEDİĞİNİ YAPTIR</h1>
   <button class="dugme" id="solBtn">SOLA GİT</button>
   <button class="dugme" id="sagBtn">SAĞA GİT</button>
-  <a href="index.html"><button class="dugme">🔙 </button></a>
-  <button class="dugme" id="buton">ZIPLA</button> <!-- butona id verdik -->
+  <a href="index.html"><button class="dugme">🔙</button></a>
+  <button class="dugme" id="buton">ZIPLA</button>
   
-<div class="kus-container"  id="kusContaier">
-  <img src="pixilart-drawing.png" alt="GODOK KUŞU" class="bizimkus" id="bizimkus" />
-  <div class="balon">Merhaba! Ben GODOK KUŞU</div>
-</div>
+  <div class="kus-container" id="kusContainer">
+    <img src="pixilart-drawing.png" alt="GODOK KUŞU" class="bizimkus" id="bizimkus" />
+    <div class="balon">Merhaba! Ben GODOK KUŞU</div>
+  </div>
 
   <script>
-    const bizimkus = document.getElementById('bizimkus');
     const kusContainer = document.getElementById('kusContainer');
-    const buton = document.getElementById('buton');
     const solBtn = document.getElementById('solBtn');
     const sagBtn = document.getElementById('sagBtn');
-solBtn.addEventListener('click', () => {
-  kusContainer.style.left = '20%';
-});
+    const ziplaBtn = document.getElementById('buton');
 
-sagBtn.addEventListener('click', () => {
-  kusContainer.style.left = '80%';
-});
-buton.addEventListener('click', () => {
-  if (kusContainers.classList.contains('zipla')) return;
+    solBtn.addEventListener('click', () => {
+      kusContainer.style.left = '20%';
+    });
 
-  kusContainers.classList.add('zipla');
+    sagBtn.addEventListener('click', () => {
+      kusContainer.style.left = '80%';
+    });
 
-  kusContainer.addEventListener('animationend', () => {
-    kusContainer.classList.remove('zipla');
-    // Animasyon sonunda kesin transform'u sıfırla:
-    kusContainer.style.transform = 'translate(-50%, -50%) translateY(0)';
-  }, { once: true });
-});
+    ziplaBtn.addEventListener('click', () => {
+      if (kusContainer.classList.contains('zipla')) return;
+
+      kusContainer.classList.add('zipla');
+
+      kusContainer.addEventListener('animationend', () => {
+        kusContainer.classList.remove('zipla');
+        // Animasyon sonunda transform sıfırlanıyor zaten keyframe ile
+      }, { once: true });
+    });
   </script>
 </body>
 </html>
+
+
 
 
 

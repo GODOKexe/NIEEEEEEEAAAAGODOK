@@ -72,6 +72,7 @@ h2 {
   height: 400px;
   image-rendering: pixelated;
   transition: left 2s ease-in-out;
+  pointer-events: none;
 }
 .balon {
   position: absolute;
@@ -121,6 +122,7 @@ h2 {
 .zipla {
   animation: zipla 0.6s ease; /* forwards kaldırdık */
 }
+
 
 
 

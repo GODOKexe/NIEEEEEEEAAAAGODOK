@@ -22,6 +22,18 @@
     const solBtn = document.getElementById('solBtn');
     const sagBtn = document.getElementById('sagBtn');
     const ziplaBtn = document.getElementById('buton');
+    const toggleBalonBtn = document.getElementById('toggleBalonBtn');
+    const balon = document.querySelector('.balon');
+
+toggleBalonBtn.addEventListener('click', () => {
+  // Önce görünür yap
+  balon.classList.add('visible');
+
+  // 4 saniye sonra kaybolsun
+  setTimeout(() => {
+    balon.classList.remove('visible');
+  }, 4000);
+});
 
     solBtn.addEventListener('click', () => {
       kusContainer.style.left = '20%';
@@ -44,6 +56,7 @@
   </script>
 </body>
 </html>
+
 
 
 

@@ -95,6 +95,11 @@ h2 {
   border-style: solid;
   border-color: white transparent transparent transparent;
 }
+.kus-container {
+  position: relative; /* Balon kuşun üstüne hizalansın */
+  display: inline-block;
+}
+
 
 @keyframes yaziyiGoster {
   0% { opacity: 0; }
@@ -112,6 +117,7 @@ h2 {
 .zipla {
   animation: zipla 0.6s ease; /* forwards kaldırdık */
 }
+
 
 
 

@@ -45,7 +45,7 @@
 ];
 let beklemeSuresi = 0;
 let beklemeSayaci;
-
+let animasyonDevamEdiyor = false;
 // Sıkılma animasyonları
 const sikilmaHareketleri = [
   () => { balonGosterOzel("Off çok sıkıldım..."); },
@@ -63,14 +63,17 @@ function kusKanatCirp() {
 }
 
 function kanatCırp() {
+  if (animasyonDevamEdiyor) return; // zaten çalışıyorsa çık
+  animasyonDevamEdiyor = true;
   let index = 0;
   const interval = setInterval(() => {
     kusImg.src = kanatAnimasyon[index];
     index++;
     if (index >= kanatAnimasyon.length) {
       clearInterval(interval);
+      animasyonDevamEdiyor = false;
     }
-  }, 150);
+  }, 200);
 }
 
 
@@ -167,6 +170,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

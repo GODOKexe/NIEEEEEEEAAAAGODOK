@@ -12,7 +12,7 @@
   <a href="index.html"><button class="dugme">GERİ GİT</button></a>
   <button class="dugme" id="buton">ZIPLA</button>
   <button class="ayrıdugme" id="toggleBalonBtn">KONUŞ</button>
-  <button id="ucBtn">KANAT ÇIRP</button>
+  <button class="dugme" id="ucBtn">KANAT ÇIRP</button>
   
 <div class="kus-container" id="kusContainer">
   <img id="bizimkus" src="kapali.png" alt="Kuş" style="width:400px;">
@@ -30,9 +30,9 @@
     const balon = document.querySelector('.balon');
     const kanatAnimasyon = [
   "kapali.png", // kanat kapalı
-  "yarim.png",  // biraz açık
+  "yarimaçik.png",  // biraz açık
   "acik.png",   // tam açık
-  "yarim.png",  // geri kapanma
+  "yarimaçik.png",  // geri kapanma
   "kapali.png"  // tekrar kapalı
 ];
     const balonYazilari = [
@@ -167,6 +167,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

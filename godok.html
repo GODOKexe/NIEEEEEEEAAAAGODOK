@@ -34,6 +34,62 @@
   "GODOĞUN GÜCÜ",
   "ASPEROX SARI GÜÇ"
 ];
+let beklemeSuresi = 0;
+let beklemeSayaci;
+
+// Sıkılma animasyonları
+const sikilmaHareketleri = [
+  () => { balonGosterOzel("Off çok sıkıldım..."); },
+  () => { balonGosterOzel("Uçcam gidecem!"); kusZipla(); },
+  () => { balonGosterOzel("Beni niye boş bıraktın la?"); },
+  () => { balonGosterOzel("Bir yerlere yürüyüm bari..."); kusSagaGit(); setTimeout(kusOrtayaGel, 2000); }
+];
+
+// Her 1 saniyede bir kontrol et
+function baslatBeklemeSayaci() {
+  beklemeSayaci = setInterval(() => {
+    beklemeSuresi++;
+    if (beklemeSuresi >= 30) { // 10 saniye hareketsizlik
+      beklemeSuresi = 0;
+      sikilmaHareketiYap();
+    }
+  }, 1000);
+}
+
+function sifirlaBekleme() {
+  beklemeSuresi = 0;
+}
+
+function sikilmaHareketiYap() {
+  const hareket = sikilmaHareketleri[Math.floor(Math.random() * sikilmaHareketleri.length)];
+  hareket();
+}
+
+// Balonu özel yazıyla göster
+function balonGosterOzel(yazi) {
+  balon.textContent = yazi;
+  balon.style.opacity = 1;
+  setTimeout(() => { balon.style.opacity = 0; }, 3000);
+}
+
+// Hareket fonksiyonları
+function kusZipla() {
+  ziplaBtn.click();
+}
+function kusSagaGit() {
+  sagBtn.click();
+}
+function kusOrtayaGel() {
+  kusContainer.style.left = "50%";
+}
+
+// Sayfa yüklenince sayaç başlasın
+baslatBeklemeSayaci();
+
+// Her buton tıklanınca bekleme süresini sıfırla
+[solBtn, sagBtn, ziplaBtn, toggleBalonBtn].forEach(btn => {
+  btn.addEventListener("click", sifirlaBekleme);
+});
 
 // Balonu rastgele yazıyla göster
 function balonGoster() {
@@ -81,6 +137,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

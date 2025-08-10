@@ -12,20 +12,29 @@
   <a href="index.html"><button class="dugme">GERİ GİT</button></a>
   <button class="dugme" id="buton">ZIPLA</button>
   <button class="ayrıdugme" id="toggleBalonBtn">KONUŞ</button>
-
+  <button id="ucBtn">KANAT ÇIRP</button>
   
-  <div class="kus-container" id="kusContainer">
-    <img src="pixilart-drawing.png" alt="GODOK KUŞU" class="bizimkus" id="bizimkus" />
-    <div class="balon">Merhaba! Ben GODOK KUŞU</div>
-  </div>
+<div class="kus-container" id="kusContainer">
+  <img id="bizimkus" src="kapali.png" alt="Kuş" style="width:200px;">
+  <div class="balon">Merhaba! Ben GODOK KUŞU</div>
+</div>
+
 
   <script>
+    const kusImg = document.getElementById("bizimkus");
     const kusContainer = document.getElementById('kusContainer');
     const solBtn = document.getElementById('solBtn');
     const sagBtn = document.getElementById('sagBtn');
     const ziplaBtn = document.getElementById('buton');
     const toggleBalonBtn = document.getElementById('toggleBalonBtn');
     const balon = document.querySelector('.balon');
+    const kanatAnimasyon = [
+  "kapali.png", // kanat kapalı
+  "yarim.png",  // biraz açık
+  "acik.png",   // tam açık
+  "yarim.png",  // geri kapanma
+  "kapali.png"  // tekrar kapalı
+];
     const balonYazilari = [
   "Merhaba! Ben GODOK KUŞU",
   "NIIIIEEEEEEEAAAAAA",
@@ -51,6 +60,17 @@ function kusKanatCirp() {
   kusContainer.addEventListener('animationend', () => {
     kusContainer.classList.remove('kanat-cirp');
   }, { once: true });
+}
+
+function kanatCırp() {
+  let index = 0;
+  const interval = setInterval(() => {
+    kusImg.src = kanatAnimasyon[index];
+    index++;
+    if (index >= kanatAnimasyon.length) {
+      clearInterval(interval);
+    }
+  }, 150);
 }
 
 
@@ -143,9 +163,11 @@ toggleBalonBtn.addEventListener('click', () => {
         // Animasyon sonunda transform sıfırlanıyor zaten keyframe ile
       }, { once: true });
     });
+  document.getElementById("ucBtn").addEventListener("click", kanatCırp);
   </script>
 </body>
 </html>
+
 
 
 

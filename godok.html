@@ -43,7 +43,16 @@ const sikilmaHareketleri = [
   () => { balonGosterOzel("Uçcam gidecem!"); kusZipla(); },
   () => { balonGosterOzel("Beni niye boş bıraktın la?"); },
   () => { balonGosterOzel("Bir yerlere yürüyüm bari..."); kusSagaGit(); setTimeout(kusOrtayaGel, 2000); }
+  () => { balonGosterOzel("Hadi uçalım!"); kusKanatCirp(); }
+
 ];
+function kusKanatCirp() {
+  kusContainer.classList.add('kanat-cirp');
+  kusContainer.addEventListener('animationend', () => {
+    kusContainer.classList.remove('kanat-cirp');
+  }, { once: true });
+}
+
 
 // Her 1 saniyede bir kontrol et
 function baslatBeklemeSayaci() {
@@ -137,6 +146,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

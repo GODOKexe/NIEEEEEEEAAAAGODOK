@@ -49,7 +49,7 @@ const sikilmaHareketleri = [
 function baslatBeklemeSayaci() {
   beklemeSayaci = setInterval(() => {
     beklemeSuresi++;
-    if (beklemeSuresi >= 30) { // 10 saniye hareketsizlik
+    if (beklemeSuresi >= 5) { // 10 saniye hareketsizlik
       beklemeSuresi = 0;
       sikilmaHareketiYap();
     }
@@ -137,6 +137,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

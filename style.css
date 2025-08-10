@@ -85,7 +85,7 @@ h2 {
   pointer-events: none;
 }
 
-.bizimkus {
+#bizimkus {
   width: 400px; /* sen img'nin genişliğini 200px vermişsin */
   height: auto;
   image-rendering: pixelated; /* pixel art için keskin görüntü */
@@ -154,6 +154,7 @@ h2 {
 .zipla {
   animation: zipla 0.6s ease;
 }
+
 
 
 

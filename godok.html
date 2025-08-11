@@ -28,6 +28,9 @@
     const ziplaBtn = document.getElementById('buton');
     const toggleBalonBtn = document.getElementById('toggleBalonBtn');
     const balon = document.querySelector('.balon');
+    document.getElementById("ucBtn").addEventListener("click", () => {
+  if (animasyonDevamEdiyor) return;
+  animasyonDevamEdiyor = true;
     const kanatAnimasyon = [
   "kapali.png", // kanat kapalı
   "yarimaçik.png",  // biraz açık
@@ -73,8 +76,8 @@ function kanatCırp() {
       clearInterval(interval);
       animasyonDevamEdiyor = false;
     }
-  }, 400);
-}
+  }, 200);
+});
 
 
 // Her 1 saniyede bir kontrol et
@@ -166,10 +169,10 @@ toggleBalonBtn.addEventListener('click', () => {
         // Animasyon sonunda transform sıfırlanıyor zaten keyframe ile
       }, { once: true });
     });
-  document.getElementById("ucBtn").addEventListener("click", kanatCırp);
   </script>
 </body>
 </html>
+
 
 
 

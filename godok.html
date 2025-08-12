@@ -28,11 +28,12 @@
     const ziplaBtn = document.getElementById('buton');
     const toggleBalonBtn = document.getElementById('toggleBalonBtn');
     const balon = document.querySelector('.balon');
-    
-    document.getElementById("ucBtn").addEventListener("click", () => {
+    const udcBtn = document.getElementById("ucBtn");
+("ucBtn").addEventListener("click", () => {
   if (animasyonDevamEdiyor) return;
   animasyonDevamEdiyor = true;
-    const kanatAnimasyon = [
+    
+  const kanatAnimasyon = [
   "pixilart-drawing.png", // kanat kapalı
   "yarimaçik.png",  // biraz açık
   "açik.png",   // tam açık
@@ -175,6 +176,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 

@@ -28,6 +28,7 @@
     const ziplaBtn = document.getElementById('buton');
     const toggleBalonBtn = document.getElementById('toggleBalonBtn');
     const balon = document.querySelector('.balon');
+    
     document.getElementById("ucBtn").addEventListener("click", () => {
   if (animasyonDevamEdiyor) return;
   animasyonDevamEdiyor = true;
@@ -48,7 +49,7 @@
 ];
 let beklemeSuresi = 0;
 let beklemeSayaci;
-let animasyonDevamEdiyor = false;
+;
 // Sıkılma animasyonları
 const sikilmaHareketleri = [
   () => { balonGosterOzel("Off çok sıkıldım..."); },
@@ -77,6 +78,8 @@ function kanatCırp() {
       animasyonDevamEdiyor = false;
     }
   }, 200);
+}
+
 });
 
 
@@ -172,6 +175,7 @@ toggleBalonBtn.addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 
